@@ -80,7 +80,7 @@ class PointsController {
 
     const pointItems = items
       .split(",")
-      .map((item: string) => Number(items.trim()))
+      .map((item: string) => Number(item.trim()))
       .map((item_id: Number) => {
         return {
           point_id,
