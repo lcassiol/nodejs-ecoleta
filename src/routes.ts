@@ -17,13 +17,24 @@ routes.get("/items", itemsController.index);
 routes.get("/points", pointsController.index);
 routes.get("/points/:id", pointsController.show);
 
+/*
+  messages({
+    'string.base': `"a" should be a type of 'text'`,
+    'string.empty': `"a" cannot be an empty field`,
+    'string.min': `"a" should have a minimum length of {#limit}`,
+    'any.required': `"a" is a required field`
+  })
+*/
+
 routes.post(
   "/points",
   upload.single("image"),
   celebrate(
     {
       body: Joi.object().keys({
-        name: Joi.string().required(),
+        name: Joi.string().required().messages({
+          "any.required": "O nome é obrigatório",
+        }),
         email: Joi.string().email().required(),
         whatsapp: Joi.number().required(),
         latitude: Joi.number().required(),
