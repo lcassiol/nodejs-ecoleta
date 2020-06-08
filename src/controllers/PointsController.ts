@@ -12,19 +12,19 @@ class PointsController {
     const points = await knex("points")
       .join("point_items", "points.id", "=", "point_items.point_id")
       .orWhereIn("point_items.item_id", parsedItems)
-      .where("city", String(city))
       .where("uf", String(uf))
+      .where("city", String(city))
       .distinct()
       .select("points.*");
 
     const serialiazedPoints = points.map((point) => {
       return {
         ...point,
-        image_url: `http://localhost:3333/uploads/${point.image}`,
+        image_url: `http://192.168.0.35:3333/uploads/${point.image}`,
       };
     });
 
-    return response.json(serialiazedPoints).send();
+    return response.json(serialiazedPoints);
   }
 
   async show(request: Request, response: Response) {
@@ -43,10 +43,10 @@ class PointsController {
 
     const serialiazedPoint = {
       ...point,
-      image_url: `http://localhost:3333/uploads/${point.image}`,
+      image_url: `http://192.168.0.35:3333/uploads/${point.image}`,
     };
 
-    return response.json({ point: serialiazedPoint, items }).send();
+    return response.json({ point: serialiazedPoint, items });
   }
 
   async create(request: Request, response: Response) {
