@@ -13,7 +13,7 @@ class ItemsController {
       };
     });
 
-    response.json(serialiazedItems).send();
+    return response.json(serialiazedItems);
   }
 }
 
