@@ -1,4 +1,6 @@
-<h1>Ecoleta backend</h1>
+<h1 align="center">
+    <img alt="Ecoleta logo" src="https://github.com/lcassiol/nodejs-ecoleta/blob/master/src/assets/images/logo.png?raw=true">
+</h1>
 
 Este projeto faz parte da semana Next Level da Rocketseat, projeto utilizando Typescript
 
@@ -17,3 +19,17 @@ Este projeto faz parte da semana Next Level da Rocketseat, projeto utilizando Ty
 - Multer
 - SQlite
 - Cors
+
+
+## Passos para rodar a aplicação
+
+- yarn ou npm install
+- yarn start
+
+--------------------
+
+### Frontend da aplicação
+[Frontend](https://github.com/lcassiol/reactjs-ecoleta)
+
+### Aplicação Mobile
+[Mobile](https://github.com/lcassiol/RN-ecoleta)
