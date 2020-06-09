@@ -24,7 +24,7 @@ Este projeto faz parte da semana Next Level da Rocketseat, projeto utilizando Ty
 ## Passos para rodar a aplicação
 
 - yarn ou npm install
-- yarn start
+- yarn dev
 
 --------------------
 
